@@ -8,7 +8,7 @@
 </suite>-->
 
 <suite name="Parallel Testing Suite">
-    <test name="Parallel Tests" parallel="methods" thread-count="1">
+    <test name="Parallel Tests" parallel="methods" thread-count="3">
         <classes>
             <class name="tests.Runner"/>
         </classes>
