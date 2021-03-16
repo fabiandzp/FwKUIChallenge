@@ -58,6 +58,7 @@ public class Runner extends Hooks {
                 equalTo("The password or email you entered is incorrect."));
 
         driver.close();
+
     }
 
     @Test

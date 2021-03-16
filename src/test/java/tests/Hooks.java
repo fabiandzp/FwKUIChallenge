@@ -18,9 +18,7 @@ import pages.LandingPage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Properties;
 
 import static java.lang.System.setProperty;
@@ -38,14 +36,14 @@ public class Hooks {
     public void setup(){
         props = new Properties();
         try {
-            props.load(new FileInputStream("src/test/resources/application.properties"));
+            props.load(new FileInputStream("application.properties"));
         } catch (IOException var2) {
-            System.out.println("Error when reading the property file");
+            log.info("Error when reading the property file");
         }
 
         //System.setProperty("webdriver.chrome.driver","src/test/resources/browserBinaries/chromedriver.exe");
         //setProperty("webdriver.chrome.driver", "C:\\Projects\\FwKUIChallenge\\src\\test\\resources\\browserDrivers\\chromedriver.exe");
-        setProperty("webdriver.chrome.driver", "src/test/resources/browserDrivers/chromedriver.exe");
+        //setProperty("webdriver.chrome.driver", "src/test/resources/browserDrivers/chromedriver.exe");
 
 
         String url = props.getProperty("url");

@@ -34,6 +34,9 @@ public class LoginPopUp extends BasePage {
         // Store the current window handle
         String winHandleBefore = driver.getWindowHandle();
 
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.closeLocationBanner();
+
         log.info("Clicking SignIn link page");
         driver.findElement(signIn).click();
 
@@ -68,6 +71,8 @@ public class LoginPopUp extends BasePage {
     private final By subMenu = By.cssSelector("div[data-track-clicks='SiteMenu']");
     private final By accountName = By.cssSelector("div[class='bdb-1 bd--offwhite padding-1 pt-0 weight-bold']");
     public String getAccountName(){
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.closeLocationBanner();
         log.info("Mouse Over Action Step");
         Actions action = new Actions(driver);
         WebElement we = driver.findElements(menu).get(4);
@@ -85,6 +90,9 @@ public class LoginPopUp extends BasePage {
     public String loginFailed(){
         // Store the current window handle
         String winHandleBefore = driver.getWindowHandle();
+
+        LandingPage landingPage = new LandingPage(driver);
+        landingPage.closeLocationBanner();
 
         log.info("Clicking SignIn link page");
         driver.findElement(signIn).click();
