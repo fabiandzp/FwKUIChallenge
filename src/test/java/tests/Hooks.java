@@ -38,7 +38,7 @@ public class Hooks {
     public void setup(){
         props = new Properties();
         try {
-            props.load(new FileInputStream("application.properties"));
+            props.load(new FileInputStream("src/test/resources/application.properties"));
         } catch (IOException var2) {
             System.out.println("Error when reading the property file");
         }
