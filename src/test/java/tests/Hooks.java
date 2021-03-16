@@ -4,7 +4,6 @@ package tests;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.Logger;
 
-import org.apache.logging.log4j.core.config.plugins.convert.TypeConverters;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +23,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Properties;
 
+import static java.lang.System.setProperty;
 import static org.apache.logging.log4j.LogManager.getLogger;
 
 public class Hooks {
@@ -42,6 +42,11 @@ public class Hooks {
         } catch (IOException var2) {
             System.out.println("Error when reading the property file");
         }
+
+        //System.setProperty("webdriver.chrome.driver","src/test/resources/browserBinaries/chromedriver.exe");
+        //setProperty("webdriver.chrome.driver", "C:\\Projects\\FwKUIChallenge\\src\\test\\resources\\browserDrivers\\chromedriver.exe");
+        setProperty("webdriver.chrome.driver", "src/test/resources/browserDrivers/chromedriver.exe");
+
 
         String url = props.getProperty("url");
         driver = new ChromeDriver();
