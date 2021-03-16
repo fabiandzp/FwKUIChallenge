@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression" >
+   <!-- <listeners>
+        <listener class-name="utils.Listeners.TestListener"/>
+        <listener class-name="utils.Listeners.AnnotationTransformer"/>
+    </listeners>-->
+
+    <test name="Demo" >
+        <classes>
+            <class name="tests.Runner" />
+        </classes>
+    </test>
+<!--
+    <test name="LoginTest">
+        <classes>
+            <class name="tests.LoginTests"/>
+        </classes>
+    </test>-->
+</suite>
+
+
+
+
